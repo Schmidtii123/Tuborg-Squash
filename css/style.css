@@ -1,0 +1,899 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*{
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+/* -------------------------------------- START ----------------------*/
+
+
+
+
+body{
+    background-color:#f5c342 ;
+    font-family: Roboto Slab;
+
+}
+
+
+/* -------------------------------------- Burgermenu ----------------------*/
+
+/* Mobil styling */
+.navigation__container {
+    background: #000000;
+    position: sticky;
+    top: 0;
+    background: #f5c342;
+    border-bottom: 1px solid rgba(34, 56, 178, 0.21);
+    z-index: 1;
+}
+
+.mobileiconlabel {
+    display: inline-block;
+    position: relative;
+    font-style: normal;
+    font-size: 1.2rem;
+    padding: 20px 10px;
+    z-index: 2;
+    color: white;
+}
+
+.menuitem {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+.active_menuitem {
+    background: #447a13;
+    color: white;
+}
+
+/* Hide checkbox and menuitems until clicked */
+.menuitems__container,
+.mobileicon {
+    display: none;
+}
+
+/* Show menuitems when mobileicon-label is clicked */
+.navigation__container input:checked ~ .menuitems__container {
+    display: block;
+    background-color: #f27405;
+}
+/* --------- Dropdown menu fra w3schools ----- */
+
+.dropdown {
+    position: relative;
+    display: block;
+    left: 0;
+    right: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f2b705;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown_content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown_content a:hover {
+    background-color: #447a13;
+    color: white;
+}
+
+.dropdown:hover .dropdown_content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.kontakt {
+    color: white;
+}
+.logo_text{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.logo{
+    top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.nav {
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    display: none;
+}
+
+
+/* -------------------------------------- Hero og text ----------------------*/
+
+.hero{
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 5rem;
+}
+
+.nyhed{
+color: #ffffff;
+text-align: center;
+margin-top: 40rem;
+padding-bottom: 4rem;
+padding-top: 10rem;
+
+
+}
+.nyhed h2{
+    font-weight: 700;
+    font-size: 2rem;
+    padding-bottom: 0.8rem;
+}
+.nyhed p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+.nyhed_img{
+    padding-top: 1rem;
+    height: 15rem;
+    width: auto;
+    align-items: center;
+    max-width: 100%;
+    padding-bottom: 5rem;
+}
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 60px);
+    left: calc(50% - 0px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 5px;
+    color: #ffffff;
+    
+  }
+  
+  .down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+    color: #ffffff;
+  }
+  @keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  .down-arrow {
+    animation: jumpInfinite 1.5s infinite;
+  }
+
+/* -------------------------------- Tuborgs produkter side ------------------*/
+.tuborg-img-squash{
+    background-image:url(../img/mikkel_jul_billede_tuborg_squash.png);
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tuborg-img-light{
+    background-image:url(../img/everland-squash.jpg);
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.tuborg_img_undertext{
+font-size: 0.4rem;
+color: #ffffff;
+font-weight: 500;
+padding-left: 2rem;
+}
+
+.ny_label{
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+.ny_label h2{
+    color: #ffffff;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    
+}
+.nye_label{
+    max-width: 100%;
+    height: 9rem;
+}
+.ny_label p{
+    font-size: 0.5rem;
+    color: #ffffff;
+    font-weight: 500;
+    padding-right: 1rem;
+    line-height: 1rem;
+    padding-left: 0.5rem;
+}
+
+.tuborg_info{
+    color: #447a13;
+    font-size: 1rem;
+    padding-left: 2rem;
+    font-weight: 600;
+}
+.se_tuborg_light{
+    display: flex;
+    flex-direction: row;
+}
+.halv_liter_light{
+    max-width: 100%;
+    width: auto;
+    height: 10rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+.se_tuborg_light_text {
+    display: flex;
+    align-self: flex-end;
+    padding-left: 2rem;
+    font-size: 0.9rem;
+    color: #447a13;
+    font-weight: 600;
+    text-decoration: underline;
+    padding-right: 3rem;
+
+}
+.box {
+    width: 20%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    color: #333;
+    border: 2px solid #447a13;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    font-weight: 700;
+  }
+  .button:hover {
+    background: #447a13;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 75px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #f27405;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #f27405;
+  }
+  .popup .content {
+    max-height: 80%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+      font-size:0.5rem;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+
+
+/* -----------------------------Historie side ----------------------*/
+.billede_undertext{
+    padding-left: 1rem;
+    font-size: 0.6rem;
+
+}
+.emil-hansen{
+    background-image: url(../img/Emil-Chr-Hansen.jpg);
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.emil-hansen-text{
+    color: #ffffff;
+    font-size: 0.6rem;
+    padding-left: 1rem;
+}
+
+.historie-card{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.card-header{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-img-1{
+    height: 7.5rem;
+    max-width: 100%;
+    width: auto;
+    padding-left: 1rem;
+    padding-top: 3rem;
+}
+.card-img-2{
+    height: 7.5rem;
+    max-width: 100%;
+    width: auto;
+    padding-right: 0.5rem;
+    padding-top: 5rem;
+}
+.card-text-1{
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 0.7rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 3rem;
+}
+.card-text-2{
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 0.7rem;
+    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-top: 5rem;
+}
+
+.video-og-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+}
+.video{
+    padding-left: 1rem;
+}
+
+.video-text{
+color: #ffffff;
+padding-left: 1rem;
+font-size: 0.9rem;
+padding-top: 1rem;
+}
+
+
+
+/* -------------------------------------- FOOTER ----------------------*/
+.footer{
+    background-color: #447a13;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    margin-top: 2rem;
+    }
+    .footer h3{
+    font-size: 1rem;
+    color: #f2b705;
+    font-family: Roboto Slab;
+    font-weight: 600;
+    }
+    .kontakt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+    .kontakt p{
+        color: #ffffff;
+        align-items: center;
+        line-height: 1.7rem;
+    }
+
+    .some{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    }
+    .some_img{
+    height: 1.5rem;
+    margin: 5px;
+    width: auto;
+    }
+
+
+
+
+
+
+/*-------------------------------------------- MEDIA--------------------------------------- */
+
+
+
+
+
+
+
+
+
+ /* ------------------------------------ IPAD AIR --------------*/
+ @media only screen and (min-width:1000px){
+    .some_img{
+        height: 35px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .some{
+        display: flex;
+        gap: 15px;
+        font-size: 2rem;
+    }
+    .hero{
+        font-size: 5rem;
+        padding-top: 10rem;
+    }
+    .nyhed h2{
+        font-size: 5rem;
+    }
+    .nyhed p{
+        font-size: 3rem;
+        line-height: 4rem;
+        text-align: center;
+    }
+    .nyhed_img{
+        height: 35rem;
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .logo_text{
+        font-size: 3rem;
+    }
+    .menuitem{
+        font-size: 2rem;
+    }
+    .dropdown_content{
+        font-size: 1.5rem;
+    }
+    .footer{
+        align-items: center;
+        justify-content: space-around;
+    }
+    .footer h3{
+        font-size: 1.5rem;
+        color: #f2b705;
+        font-family: Roboto Slab;
+        font-weight: 600;
+        }
+        .kontakt{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 1rem;
+        }
+        .kontakt p{
+            color: #ffffff;
+            align-items: center;
+            line-height: 2rem;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ------------------------------------ Desktop 1920-1080 --------------*/
+    @media only screen and (min-width:850px){
+       /* -------                 logo og footer            ------*/
+        .logo{
+            justify-content: flex-start;
+            margin-left: 10px;
+        }
+        .logo_text{
+            font-size: 4rem;
+        }
+        .dropdown_content{
+            font-size: 1rem;
+        }
+        
+        .some_img{
+            height: 2rem;
+            display: flex;
+            flex-direction: row;
+        }
+        
+            .some{
+            display: flex;
+            gap: 15px;
+            
+        }
+        .footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .kontakt{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 1rem;
+        }
+        .kontakt p{
+            color: #ffffff;
+            align-items: center;
+            line-height: 2rem;
+            font-size: 1.5rem;
+        }
+
+
+
+    /* Hide Mobile icon and its label */
+    .mobileiconlabel,
+    .mobileicon {
+        display: none;
+    }
+
+    .dropdown_content {
+        display: none;
+        position: absolute;
+        background-color: #f27405;
+        min-width: 130px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+    }
+    
+    /* får menupunkterne til at display flex, standard row */
+    .menuitems__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3rem;
+      }
+
+    /* rykker menupunkterne til flexend, så der er plads til logo */
+    .navigation__container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 5rem;
+
+    }
+    .dropdown a{
+        max-width: 100%;
+    }
+    .menuitem {
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 500;
+        max-width: 100%;
+    }
+
+    .menuitem:hover {
+        background: #447a13;
+        color: white;
+    } 
+
+    /* farveskift ved breakpoint*/
+    .menuitem {
+        color: black;
+    }
+
+    .dropdown_content a {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .active_menuitem {
+        background: #447a13;
+        color: white;
+    }
+
+    /*                                  forside                 */
+    .hero{
+        font-size: 5rem;
+        padding: 10rem 2rem 2rem 0rem;
+   
+    }
+    .nyhed h2{
+        font-size: 4rem;
+    }
+    .nyhed p{
+        font-size: 3rem;
+        line-height: 1.5;
+        text-align: center;
+        padding: 3rem;
+    }
+    .nyhed_img{
+        height: 50rem;
+    }
+
+    /*                                  tuborgsiderne                */
+    .tuborg-container{
+        height: 10rem;
+        width: auto;
+    }
+
+    .nye_label{
+        height: 45rem;
+    }
+
+    .ny_label h2{
+        font-size: 6rem;
+    }
+
+    .ny_label p{
+        font-size: 3rem;
+        line-height: 1;
+        padding-right: 1rem;
+        padding-left: 2rem;
+    }
+    .tuborg_img_undertext{
+        font-size: 1.5rem;
+    }
+    .se_tuborg_light_text{
+        font-size: 2rem;
+    }
+
+    .halv_liter_light{
+        height: 30rem;
+    }
+
+    .button{
+        font-size: 3rem;
+    }
+
+    .box {
+        width: 60%;
+        margin: 0 auto;
+        padding: 35px;
+        border-radius: 20px/50px;
+        text-align: center;
+      }
+      .content{
+        font-size: 2rem;
+      }
+      .popup h2{
+        font-size: 3rem;
+      }
+      .tuborg-img{
+        height: 20rem;
+
+      }
+      .tuborg-img-squash{
+        height: 750px;
+      }
+      .tuborg-img-light{
+        height: 650px;
+      }
+      
+
+
+      /* --------------------------------------- Historie ---------------------------- */
+      .emil-hansen{
+        height: 750px;
+      }
+      .emil-hansen-text{
+        font-size: 1.5rem;
+      }
+      .card-header{
+        font-size: 4rem;
+      }
+      .card-img-1{
+        height: 25rem;
+      }
+      .card-text-1{
+        font-size: 2.5rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
+      .card-img-2{
+        height: 25rem;
+        padding-right: 2rem;
+      }
+      .card-text-2{
+        font-size: 2.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      .billede_undertext{
+        font-size: 1.2rem;
+      }
+      .video{
+        height: 500px;
+        width: 1000px;
+      }
+      .video-og-text{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .video-text{
+        padding-right: 2rem;
+        font-size: 2rem;
+        align-self: flex-end;
+      }
+
+
+
+    }
